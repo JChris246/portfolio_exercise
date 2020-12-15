@@ -20,10 +20,6 @@
     @apply shadow p-2 mt-5 md:mt-10 mx-6;
 }
 
-.side-img {
-    @apply shadow h-1/6 mt-4 p-1 mx-2;
-}
-
 .post-container {
     @apply flex flex-col md:flex-row;
 }
@@ -38,5 +34,5 @@
 
 .main-container {
     background-image: url("bg_head.jpg");
-    @apply p-6 flex flex-col md:flex-row md:space-x-4;
+    @apply p-6 flex flex-col-reverse items-start md:flex-row md:space-x-4;
 }

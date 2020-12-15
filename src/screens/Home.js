@@ -33,6 +33,7 @@ const posts = [
         title: "Patient Management System",
         content: "This project was intially created as a school research project, to develop a proposed electronic management system for patients at health care instutitions, mainly the QEH",
         date: "8th Dec 2020",
+        link: "https://github.com/JChris246/PatientManagementSystem",
     }
 ]
 
@@ -61,7 +62,8 @@ const Home = () => {
                         <div className="post-container">
                             <img src={post.img} alt={post.title} className="img"></img>
                             <div className="px-4 mt-4">
-                                <h2 className="post-title">{post.title}</h2>
+                                {post.link ? (<a href={post.link}><h2 className="post-title">{post.title}</h2></a>) 
+                                : (<h2 className="post-title">{post.title}</h2>)}
                                 <span className="text-gray-600">{post.content}</span>
                                 <p className="mb-4"></p>
                                 <span>{post.date}</span>
@@ -78,7 +80,7 @@ const Home = () => {
                 {popular_posts.map(post => (
                     <>
                         <div className="flex md:flex-row">
-                            <img src={post.img} alt={post.title} className=""></img>
+                            <img src={post.img} alt={post.title} className="p-2"></img>
                             <div className="px-2 mt-4">
                                 <h2 className="side-post-title">{post.title}</h2>
                                 <span className="text-gray-600">{post.content}</span>
