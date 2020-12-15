@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navbar {
+    background-color: #40b0c7;
+    @apply flex flex-row;
+}
+
+.navlink {
+    @apply text-white px-6 py-2 mb-1 mx-1 border-none md:border-solid md:border-b-2 hover:border-blue-400;
+}
+
+.header {
+    @apply rounded-b-none rounded bg-gray-300 py-4 pl-4 mb-4 text-white;
+}
+
+.img {
+    height: 175px;
+    @apply shadow p-2 mt-5 md:mt-10 mx-6;
+}
+
+.side-img {
+    @apply shadow h-1/6 mt-4 p-1 mx-2;
+}
+
+.post-container {
+    @apply flex flex-col md:flex-row;
+}
+
+.side-post-title {
+    @apply mb-2 -mt-4 text-base whitespace-nowrap font-bold hover:text-red-500 cursor-pointer;
+}
+
+.post-title {
+    @apply mb-4 pr-2 text-3xl font-bold hover:text-red-500 cursor-pointer;
+}
+
+.main-container {
+    background-image: url("bg_head.jpg");
+    @apply p-6 flex flex-col md:flex-row md:space-x-4;
+}

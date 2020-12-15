@@ -1,9 +1,33 @@
-import './App.css';
 import './assets/output.css'
+// import React from "react"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+} from "react-router-dom"
 
-function App() {
+import Home from './screens/Home'
+import About from './screens/About'
+
+const App = () => {
   return (
-    <h1 className="text-blue-400 m-auto w-1/4 text-center p-10">Hello world</h1>
+    <Router>
+        <div>
+          <nav>
+            <ul className="navbar">
+              <li className="navlink"><Link to="/">Home</Link></li>
+              <li className="navlink"><Link to="/about">About</Link></li>
+            </ul>
+          </nav>
+
+          <Switch>
+            <Route path="/about" component={About} />
+            <Route path="/home" component={Home} />
+            <Route path="/" component={Home} />
+          </Switch>
+        </div>
+      </Router>
   );
 }
 
