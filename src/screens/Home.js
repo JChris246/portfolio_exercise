@@ -4,6 +4,7 @@ import postImg3 from '../assets/nextjs.png'
 import postImg4 from '../assets/compute-module-4-feature-image-500x357.jpg'
 import postImg5 from  '../assets/web.png'
 import postImg6 from  '../assets/csharp-featured.png'
+import postImg7 from  '../assets/pms.png'
 
 
 const posts = [
@@ -27,7 +28,12 @@ const posts = [
         title: "Raspberry Pi Compute Module 4 on sale now from $25",
         content: "It’s become a tradition that we follow each Raspberry Pi model with a system-on-module variant based on the same core silicon. Raspberry Pi 1 gave rise to the original Compute Module in 2014; Raspberry Pi 3 and 3+ were followed by Compute Module 3 and 3+ in 2017 and 2019 respectively. Only Raspberry Pi 2, our shortest-lived flagship product at just thirteen months, escaped the Compute Module treatment.",
         date: "19th Oct 2020",
-    },
+    }, {
+        img: postImg7,
+        title: "Patient Management System",
+        content: "This project was intially created as a school research project, to develop a proposed electronic management system for patients at health care instutitions, mainly the QEH",
+        date: "8th Dec 2020",
+    }
 ]
 
 const popular_posts = [
