@@ -16,8 +16,7 @@
 }
 
 .img {
-    height: 175px;
-    @apply shadow p-2 mt-5 md:mt-10 mx-6;
+    @apply shadow p-2 mt-5 md:mt-10 mx-6 md:h-48;
 }
 
 .post-container {
