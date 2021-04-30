@@ -3,6 +3,7 @@ import postImg2 from '../assets/learning_tool.png'
 import postImg3 from '../assets/JsBot_logo.jpeg'
 import postImg4 from '../assets/PyBot_logo.jpeg'
 import postImg5 from  '../assets/pms.png'
+import postImg6 from  '../assets/dar_electronics.png'
 
 
 const posts = [
@@ -36,7 +37,13 @@ const posts = [
         content: "Python discord bot built using discord.py rewrite. The team wanted to try writing some of the features of the js version in python",
         date: "14th Dec 2020",
         link: "https://github.com/TheNotoriousMac/PyBot",
-    },
+    }, {
+        img: postImg6,
+        title: "DarElectronics",
+        content: "Non-functional Ecommerce site build by the S-Race team as a school group project",
+        date: "29th March 2021",
+        link: "https://github.com/JChris246/DarElectronics",
+    }
 ]
 
 const Home = () => {

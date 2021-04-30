@@ -1,17 +1,17 @@
 import './assets/output.css'
 // import React from "react"
-import {
+/*import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link,
-} from "react-router-dom"
+} from "react-router-dom"*/
 
 import Home from './screens/Home'
-import About from './screens/About'
+// import About from './screens/About'
 
 const App = () => {
-  return (
+  /*return (
     <Router>
         <div>
           <nav>
@@ -28,7 +28,8 @@ const App = () => {
           </Switch>
         </div>
       </Router>
-  );
+  );*/
+  return Home();
 }
 
 export default App;
