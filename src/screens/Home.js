@@ -1,48 +1,54 @@
-import postImg1 from '../assets/ecommerce.png'
-import postImg2 from '../assets/learning_tool.png'
-import postImg3 from '../assets/JsBot_logo.jpeg'
-import postImg4 from '../assets/PyBot_logo.jpeg'
-import postImg5 from  '../assets/pms.png'
-import postImg6 from  '../assets/dar_electronics.png'
+const importAll = (r) => { 
+	let images = {};
+    r.keys().forEach(item => images[item.substr(2, item.lastIndexOf(".") - 2)] = r(item).default);
+	return images
+}
 
+const images = importAll(require.context('../assets', false, /\.(png|jpe?g)$/));
 
 const posts = [
     {
-        img: postImg2,
+        img: images.learning_tool,
         title: "Sys-Arch-Learning-Tool",
         content: "Each project group is expected to develop a learning tool for their drawn topic. The purpose of this tool is to aid peers in understanding the material associated with the topic. ",
         date: "30th Oct 2019",
         link: "https://github.com/JChris246/Sys-Arch-Learning-Tool",
     }, {
-        img: postImg5,
+        img: images.pms,
         title: "Patient Management System",
         content: "This project was intially created as a school research project, to develop a proposed electronic management system for patients at health care instutitions, mainly the QEH",
         date: "8th Dec 2020",
         link: "https://github.com/JChris246/PatientManagementSystem",
     }, {
-        img: postImg1,
+        img: images.ecommerce,
         title: "Technical_Exercise",
         content: "An ecommerce store. Must indicate the photos, prices and description for items. Must indicate the contents of the shopping cart",
         date: "20th Nov 2020",
         link: "https://github.com/JChris246/Technical_Exercise",
     }, {
-        img: postImg3,
+        img: images.JsBot_logo,
         title: "JSDiscordBot",
         content: "Discord Bot built with JavaScript by the S-Race team!",
         date: "13th Dec 2019",
         link: "https://github.com/TheNotoriousMac/JSDiscordBot",
     }, {
-        img: postImg4,
+        img: images.PyBot_logo,
         title: "PyBot",
         content: "Python discord bot built using discord.py rewrite. The team wanted to try writing some of the features of the js version in python",
         date: "14th Dec 2020",
         link: "https://github.com/TheNotoriousMac/PyBot",
     }, {
-        img: postImg6,
+        img: images.dar_electronics,
         title: "DarElectronics",
         content: "Non-functional Ecommerce site build by the S-Race team as a school group project",
         date: "29th March 2021",
         link: "https://github.com/JChris246/DarElectronics",
+    }, {
+        img: images.boop_chat,
+        title: "Boop Chat",
+        content: "Whatsapp clone as hobby project",
+        date: "17th August 2021",
+        link: "https://github.com/BoopChat/boop",
     }
 ]
 
