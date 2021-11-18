@@ -12,43 +12,46 @@ const posts = [
         title: "Sys-Arch-Learning-Tool",
         content: "Each project group is expected to develop a learning tool for their drawn topic. The purpose of this tool is to aid peers in understanding the material associated with the topic. ",
         date: "30th Oct 2019",
-        link: "https://github.com/JChris246/Sys-Arch-Learning-Tool",
+        github: "https://github.com/JChris246/Sys-Arch-Learning-Tool",
+        link: "https://jchris246.github.io/Sys-Arch-Learning-Tool/"
     }, {
         img: images.pms,
         title: "Patient Management System",
         content: "This project was intially created as a school research project, to develop a proposed electronic management system for patients at health care instutitions, mainly the QEH",
         date: "8th Dec 2020",
-        link: "https://github.com/JChris246/PatientManagementSystem",
+        github: "https://github.com/JChris246/PatientManagementSystem",
     }, {
         img: images.ecommerce,
         title: "Technical_Exercise",
         content: "An ecommerce store. Must indicate the photos, prices and description for items. Must indicate the contents of the shopping cart",
         date: "20th Nov 2020",
-        link: "https://github.com/JChris246/Technical_Exercise",
+        github: "https://github.com/JChris246/Technical_Exercise",
+        link: "https://jchris246.github.io/Technical_Exercise/"
     }, {
         img: images.JsBot_logo,
         title: "JSDiscordBot",
         content: "Discord Bot built with JavaScript by the S-Race team!",
         date: "13th Dec 2019",
-        link: "https://github.com/TheNotoriousMac/JSDiscordBot",
+        github: "https://github.com/TheNotoriousMac/JSDiscordBot",
     }, {
         img: images.PyBot_logo,
         title: "PyBot",
         content: "Python discord bot built using discord.py rewrite. The team wanted to try writing some of the features of the js version in python",
         date: "14th Dec 2020",
-        link: "https://github.com/TheNotoriousMac/PyBot",
+        github: "https://github.com/TheNotoriousMac/PyBot",
     }, {
         img: images.dar_electronics,
         title: "DarElectronics",
         content: "Non-functional Ecommerce site build by the S-Race team as a school group project",
         date: "29th March 2021",
-        link: "https://github.com/JChris246/DarElectronics",
+        github: "https://github.com/JChris246/DarElectronics",
+        link: "https://jchris246.github.io/DarElectronics/"
     }, {
         img: images.boop_chat,
         title: "Boop Chat",
         content: "Whatsapp clone as hobby project",
         date: "17th August 2021",
-        link: "https://github.com/BoopChat/boop",
+        github: "https://github.com/BoopChat/boop",
     }
 ]
 
@@ -63,10 +66,9 @@ const Home = () => {
                 {posts.map(post => (
                     <>
                         <div className="post-container">
-                            <img src={post.img} alt={post.title} className="img"></img>
+                            <img src={post.img} alt={post.title} className="img" />
                             <div className="px-4 mt-8">
-                                {post.link ? (<a href={post.link}><h2 className="post-title">{post.title}</h2></a>) 
-                                : (<h2 className="post-title">{post.title}</h2>)}
+                                <a href={post.link || post.github}><h2 className="post-title">{post.title}</h2></a>
                                 <span className="text-gray-600">{post.content}</span>
                                 <p className="mb-4"></p>
                                 <span>{post.date}</span>
