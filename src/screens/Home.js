@@ -1,4 +1,4 @@
-const importAll = (r) => { 
+const importAll = (r) => {
 	let images = {};
     r.keys().forEach(item => images[item.substr(2, item.lastIndexOf(".") - 2)] = r(item).default);
 	return images
@@ -55,7 +55,7 @@ const posts = [
     }, {
         img: images.snake,
         title: "Snake",
-        content: "Snake game created with tailwindcss and p5 js a library for manipulation html canvas,",
+        content: "Snake game created with tailwindcss and p5 js a library for manipulation html canvas",
         date: "8th December 2021",
         github: "https://github.com/JChris246/p5.js_snake",
         link: "https://jchris246.github.io/p5.js_snake/"
