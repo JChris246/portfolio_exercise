@@ -52,6 +52,13 @@ const posts = [
         content: "Whatsapp clone as hobby project",
         date: "17th August 2021",
         github: "https://github.com/BoopChat/boop",
+    }, {
+        img: images.snake,
+        title: "Snake",
+        content: "Snake game created with tailwindcss and p5 js a library for manipulation html canvas,",
+        date: "8th December 2021",
+        github: "https://github.com/JChris246/p5.js_snake",
+        link: "https://jchris246.github.io/p5.js_snake/"
     }
 ]
 
@@ -60,8 +67,8 @@ const Home = () => {
     return (
         <div className="main-container">
             <div className="md:w-3/4 rounded shadow mt-5 md:mt-10 bg-white">
-                <header className="header">
-                    SOME OF MY PROJECTS
+                <header className="header uppercase">
+                    Some of my projects
                 </header>
                 {posts.map(post => (
                     <>
